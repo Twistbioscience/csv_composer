@@ -1,5 +1,17 @@
 require "csv_composer/version"
 
 module CsvComposer
-  # Your code goes here...
+  require 'abstraction'
+  require 'rcsv'
+
+  require 'csv_composer/base'
+  require 'csv_composer/generic'
+  require 'csv_composer/writer'
+
+  require 'csv_composer/header_processors/base'
+  require 'csv_composer/header_processors/generic'
+
+  require 'csv_composer/item_processors/base'
+  require 'csv_composer/item_processors/generic'
+
 end
