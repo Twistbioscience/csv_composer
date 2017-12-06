@@ -2,6 +2,12 @@ module CsvComposer
   class Base
     abstract
 
+    def compose(items, opts = {})
+      content = write(items)
+      export(content, opts)
+    end
+
+
     private
 
     def header_processor

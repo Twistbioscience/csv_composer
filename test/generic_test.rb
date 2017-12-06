@@ -14,7 +14,7 @@ module CsvComposer
 
     def returns_csv_content_in_memory_file_with_original_filename_associated
       filename = 'filename'
-      file = @exporter.csv_file(@items, filename)
+      file = @exporter.compose(@items, filename: filename)
       assert_equal(file.original_filename, filename)
       assert_equal(file.class, StringIO)
     end

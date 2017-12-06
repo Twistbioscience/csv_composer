@@ -1,11 +1,5 @@
 module CsvComposer
   class Generic < Base
-
-    def csv_file(items, filename = nil)
-      content = write(items)
-      export(content, filename: filename)
-    end
-
     protected
 
     def header_processor
