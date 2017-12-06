@@ -14,4 +14,6 @@ module CsvComposer
   require 'csv_composer/item_processors/base'
   require 'csv_composer/item_processors/generic'
 
+  require 'csv_composer/file_exporters/base'
+  require 'csv_composer/file_exporters/string_io'
 end
