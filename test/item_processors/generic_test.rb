@@ -7,7 +7,7 @@ module CsvComposer::ItemProcessors
       related_lambda = Minitest::Mock.new
       item = { name: 'name1', value: 'value1'}
       mapping = [
-        { header: 'Name', key: :name, lambda: related_lambda },
+        { header: 'Id', key: :id, lambda: related_lambda },
         { header: 'Value', key: :value, lambda: related_lambda }
       ]
       related_lambda.expect(:call, item[:name], [item, mapping[0][:key]])

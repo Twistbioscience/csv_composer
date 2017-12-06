@@ -16,8 +16,8 @@ module CsvComposer
 
     def columns_mapping
       [
-        { header: 'Field', key: :field, lambda: generic_lambda },
-        { header: 'Value', key: :value, lambda: generic_lambda }
+        { id: 'Id', key: :id, lambda: generic_lambda },
+        { id: 'Value', key: :value, lambda: generic_lambda }
       ]
     end
 
