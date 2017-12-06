@@ -3,7 +3,7 @@ module CsvComposer
     abstract
 
     def compose(items, opts = {})
-      content = write(items)
+      content = write(items, opts)
       export(content, opts)
     end
 
