@@ -1,9 +1,6 @@
 require "csv_composer/version"
 
 module CsvComposer
-  require 'abstraction'
-  require 'rcsv'
-
   require 'csv_composer/base'
   require 'csv_composer/generic'
   require 'csv_composer/writer'

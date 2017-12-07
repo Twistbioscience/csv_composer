@@ -1,12 +1,10 @@
 module CsvComposer
   class Base
-    abstract
 
     def compose(items, opts = {})
       content = write(items, opts)
       export(content, opts)
     end
-
 
     private
 

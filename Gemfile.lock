@@ -6,21 +6,17 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    abstraction (0.0.4)
     minitest (5.10.3)
     rake (10.5.0)
-    rcsv (0.3.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  abstraction (~> 0.0.4)
-  bundler (~> 1.15)
+  bundler (~> 1.14)
   csv_composer!
   minitest (~> 5.0)
   rake (~> 10.0)
-  rcsv (~> 0.3.1)
 
 BUNDLED WITH
-   1.15.3
+   1.16.0
