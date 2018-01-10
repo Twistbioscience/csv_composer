@@ -5,7 +5,7 @@ module CsvComposer::HeaderProcessors
 
     def setup
       @mapping = [
-        { id: 'Id', key: :id },
+        { header: 'Id', key: :id },
         { header: 'Value', key: :sequence }
       ]
     end

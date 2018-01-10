@@ -10,7 +10,7 @@ module CsvComposer
       ItemProcessors::Generic
     end
 
-    def generic_lambda
+    def hash_key_lambda
       ->(item, key) { item[key] || '' }
     end
 
@@ -22,8 +22,8 @@ module CsvComposer
 
     def columns_mapping
       [
-        { id: 'Id', key: :id, lambda: generic_lambda },
-        { id: 'Value', key: :value, lambda: generic_lambda }
+        { id: 'Id', key: :id, lambda: hash_key_lambda },
+        { id: 'Value', key: :value, lambda: hash_key_lambda }
       ]
     end
 
