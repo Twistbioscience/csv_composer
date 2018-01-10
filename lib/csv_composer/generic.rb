@@ -14,6 +14,12 @@ module CsvComposer
       ->(item, key) { item[key] || '' }
     end
 
+    def public_method_lambda
+      lambda do |item, method_name|
+        item.public_send(method_name)
+      end
+    end
+
     def columns_mapping
       [
         { id: 'Id', key: :id, lambda: generic_lambda },
