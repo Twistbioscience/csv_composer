@@ -3,7 +3,7 @@ module CsvComposer::HeaderProcessors
 
     def process(columns_mapping, opts)
       columns_mapping.map do |c|
-        c[:header]
+        c[:header] || ''
       end
     end
 
