@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "csv_composer"
   spec.version       = CsvComposer::VERSION
   spec.authors       = ["Jorge Smulevici"]
-  spec.email         = ["jsmulevici@gmail.com"]
+  spec.email         = ["jsmulevici@twistbioscience.com", "open-source@twistbioscience.com"]
 
-  spec.summary       = %q{csv exporter.}
-  spec.description   = %q{Generic and easy csv writer and exporter.}
+  spec.summary       = %q{csv exporter}
+  spec.description   = %q{Easy and generic csv writer and exporter}
   spec.homepage      = "https://github.com/Twistbioscience/csv_composer"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
