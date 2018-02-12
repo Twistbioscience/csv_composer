@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = CsvComposer::VERSION
   spec.authors       = ["Jorge Smulevici"]
   spec.email         = ["jsmulevici@twistbioscience.com", "open-source@twistbioscience.com"]
+  spec.licenses      = ['MIT']
 
   spec.summary       = %q{csv exporter}
   spec.description   = %q{Easy and generic csv writer and exporter}
