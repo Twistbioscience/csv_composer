@@ -1,4 +1,4 @@
-require './test/test_helper'
+require_relative '../test_helper'
 
 module CsvComposer::HeaderProcessors
   class GenericCsvHeaderProcessorTest < Minitest::Test
