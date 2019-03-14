@@ -1,4 +1,4 @@
-require 'test_helper'
+require_relative 'test_helper'
 
 module CsvComposer
   class GenericTest < Minitest::Test
@@ -12,7 +12,7 @@ module CsvComposer
       ]
     end
 
-    def returns_csv_content_in_memory_file_with_original_filename_associated
+    def test_returns_csv_content_in_memory_file_with_original_filename_associated
       filename = 'filename'
       file = @exporter.compose(@items, filename: filename)
       assert_equal(file.original_filename, filename)

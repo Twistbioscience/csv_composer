@@ -1,4 +1,4 @@
-require 'test_helper'
+require_relative 'test_helper'
 
 module CsvComposer
   class WriterTest < Minitest::Test
@@ -36,5 +36,22 @@ module CsvComposer
       assert_mock(item_processor)
     end
 
-  end
+    def test_generates_the_right_contect_when_header_processor_is_not_present
+      header_processor = Minitest::Mock.new
+      header_processor.expect(:process, nil, [@mapping, {}])
+      
+      item_processor = Minitest::Mock.new
+      processed_first_item = [@items[0][:name], @items[0][:value]]
+      processed_last_item = [@items[1][:name], @items[1][:value]]
+
+      item_processor.expect(:process_value, processed_first_item, [@items[0], @mapping, {}])
+      item_processor.expect(:process_value, processed_last_item, [@items[1], @mapping, {}])
+
+      content = @writer.write(header_processor, item_processor, @items, @mapping)
+      expected_content = "#{@items[0][:name]},#{@items[0][:value]}\n#{@items[1][:name]},#{@items[1][:value]}\n"
+
+      assert_equal(expected_content, content)
+      assert_mock(item_processor)
+    end
+end
 end
