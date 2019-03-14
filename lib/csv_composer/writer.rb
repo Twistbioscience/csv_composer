@@ -5,8 +5,8 @@ module CsvComposer
 
     def write(header_processor, item_processor, collection, columns_mapping, opts = {})
       CSV.generate do |csv|
-        unless header_processor.nil?
-          headers = header_processor.process(columns_mapping, opts)
+        headers = header_processor.process(columns_mapping, opts)
+        if headers
           csv << headers.compact
           opts[:headers] = headers # We are adding the headers in case you need them to process your items
         end

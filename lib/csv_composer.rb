@@ -7,6 +7,8 @@ module CsvComposer
 
   require 'csv_composer/header_processors/base'
   require 'csv_composer/header_processors/generic'
+  require 'csv_composer/header_processors/empty'
+
 
   require 'csv_composer/item_processors/base'
   require 'csv_composer/item_processors/generic'

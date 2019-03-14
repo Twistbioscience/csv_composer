@@ -1,7 +1,7 @@
 require_relative '../test_helper'
 
 module CsvComposer::HeaderProcessors
-  class GenericCsvHeaderProcessorTest < Minitest::Test
+  class GenericTest < Minitest::Test
 
     def setup
       @mapping = [
