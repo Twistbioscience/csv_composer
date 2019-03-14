@@ -1,5 +1,5 @@
 module CsvComposer::HeaderProcessors
-  class EmptyHeader < Base
+  class Empty < Base
 
     def process(columns_mapping, opts)
     	nil
