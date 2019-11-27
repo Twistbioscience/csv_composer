@@ -1,11 +1,12 @@
 PATH
   remote: .
   specs:
-    csv_composer (1.0.2)
+    csv_composer (1.0.3)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    byebug (11.0.1)
     minitest (5.10.3)
     rake (10.5.0)
 
@@ -14,9 +15,10 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.14)
+  byebug
   csv_composer!
   minitest (~> 5.0)
   rake (~> 10.0)
 
 BUNDLED WITH
-   1.16.0
+   1.17.2

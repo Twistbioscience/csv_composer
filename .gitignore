@@ -52,3 +52,4 @@ build-iPhoneSimulator/
 *.iml
 .idea/
 .travis.yml
+.byebug_history
