@@ -15,6 +15,8 @@ module CsvComposer
     def test_returns_csv_content_in_memory_file_with_original_filename_associated
       filename = 'filename'
       file = @exporter.compose(@items, filename: filename)
+
+      assert(file.string.start_with?('sep=,\n'))
       assert_equal(file.original_filename, filename)
       assert_equal(file.class, StringIO)
     end

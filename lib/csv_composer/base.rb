@@ -2,7 +2,9 @@ module CsvComposer
   class Base
 
     def compose(items, opts = {})
-      content = write(items, opts)
+      content = separator_metadata
+      content += write(items, opts)
+
       export(content, opts)
     end
 
@@ -28,6 +30,10 @@ module CsvComposer
 
     def export(content, opts = {})
       exporter.new.export(content, opts)
+    end
+    
+    def separator_metadata
+      "sep=,\n"
     end
 
   end

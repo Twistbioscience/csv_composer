@@ -53,5 +53,5 @@ module CsvComposer
       assert_equal(expected_content, content)
       assert_mock(item_processor)
     end
-end
+  end
 end
